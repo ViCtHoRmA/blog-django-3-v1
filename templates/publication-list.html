@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for post in publication_list %}
-        <a href="{% url 'publication-detail' post.pk %}"><h2>{{ post.title }}</h2></a>  # asi se hace un link a la pagina de detalle de la publicacion
+        <a href="{% url 'publication-detail' post.pk %}"><h2>{{ post.title }}</h2></a> 
         <p>{{ post.author }}</p>
     {% endfor %}
 {% endblock content %}
