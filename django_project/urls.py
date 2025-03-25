@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('accounts/', include('django.contrib.auth.urls')), # se incluyen las urls de autenticacion de django
+    path('accounts/', include('accounts.urls')), # se incluyen las urls de la aplicacion accounts
 ]
