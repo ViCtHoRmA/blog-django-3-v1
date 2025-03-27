@@ -5,9 +5,13 @@
     <p>{{ publication.author }}</p>
     <p>{{ publication.body }}</p>
 
-    <!-- boton para editar -->
-    <a href="{% url 'publication-update' publication.pk %}">Editar</a>
+        
+    {% if publication.author.pk == request.user.pk %}    
+        <!-- boton para editar -->
+        <a href="{% url 'publication-update' publication.pk %}">Editar</a>
 
-    <!-- boton para eliminar -->
-    <a href="{% url 'publication-delete' publication.pk %}">Eliminar</a>
+        <!-- boton para eliminar -->
+        <a href="{% url 'publication-delete' publication.pk %}">Eliminar</a>
+    {% endif %}
+
 {% endblock content %}
